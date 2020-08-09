@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <div class="box">
+		<h1>Pay Here</h1>
+		{% if result%}
+			<form action="/upi" method="POST">
+			<input type="text" name="merchantId" value="{{result['merchant']}}" id="merchantId" placeholder="merchant Id" required/>
+			<br>
+			<input type="text" name="userId" value="{{result['userId']}}" id="userId" placeholder="User ID" required/>
+			<br>
+			<input type="text" name="amount"  id="amount" placeholder="100" required/>
+			<br>
+			<input type="submit" class="button" value="Pay through UPI"/><br>
+			<input type="submit" class="button" value="Pay through credit wallet" formaction="/paycredit" formmethod="post"/>
+			<input type="submit" class="button" value="Pay through EMI" formaction="/tenureEMI" formmethod="post"/>
+			<br>
+			<h1> </h1>
+	        </form>
+
+	        {% if 'status' in result%}
+	        <br>
+	        <br>
+	        <p> payment successful </p>
+	        {% endif %}
+
+
+        {% endif %}
+
+        
+		</div>
+        
+</body>
+</html>
+
+<script>
+
+</script>

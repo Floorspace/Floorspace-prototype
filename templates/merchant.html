@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+  			<h1>Awesome Bitch. Merchant login</h1>
+        <a href="/loginscreen">logout</a>
+
+        {% for key in result3%}
+              <h3>Your bank balance: {{key[0]}}</h3>
+               <br>
+         {% endfor %}
+              <br>
+              <h3>Credit transactions</h3>
+              {% for key in result1%}
+              <h4>{{key[0]}}</h4>
+              <h4>{{key[2]}}</h4>
+              <h4>{{key[3]}}</h4>
+               <br>
+               <br>
+               <br>
+         {% endfor %}
+         <br>
+         <br>
+         <h3>EMI transactions</h3>
+         {% for key in result2%}
+         <h4>{{key[0]}}</h4>
+         <h4>{{key[1]}}</h4>
+         <h4>{{key[2]}}</h4>
+          <br>
+          <br>
+          <br>
+       
+    {% endfor %}
+</body>
+</html>

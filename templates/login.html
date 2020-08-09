@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+      <div class="box">
+  			<h1>Log In</h1>
+  			<form action="/loginscreen" method="post">
+    			<input type="text" name="username" id="username" placeholder="Username" required/>
+    			<br>
+    			<input type="password" name="password" id="password" placeholder="Password" required/>
+          <br>
+          <input type="radio" name="usertype" value="user" checked>User<br>
+          <input type="radio" name="usertype" value="merchant">Merchant<br>
+          <input type="submit" class="button" value="Log In"/><br>
+          <h1> </h1>
+          <a href="/signupscreen">signup</a>
+          <br>
+        </form>
+        
+        </div>
+        
+        <h3> {{ error }}</h3>
+    
+</body>
+</html>

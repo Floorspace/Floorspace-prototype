@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <link href="main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+      <div class="box" style="max-width:500px;margin:auto;">
+  			<h2>Post ad details here</h2>
+  			<form action="/postADInfo" method="post">
+    			<input type="text" name="propertyType" id="propertyType" placeholder="Property type : RESIDENTIAL/COMMERCIAL" size="50" required/>
+                <br>
+                <input type="text" name="city" id="city" placeholder="City: HYDERABAD or BANGALORE" size="50" required/>
+                <br>
+                <input type="text" name="address" id="address" placeholder="Address" size="50" required/>
+                <br>
+                <input type="text" name="description" id="description" placeholder="Property description" size="50" required/>
+                <br>
+                <input type="text" name="propertyCost" id="propertyCost" placeholder="Estimated cost of construction" size="50" required/>
+                <br>
+                <input type="text" name="numOfPoolMembers" id="numOfPoolMembers" placeholder="Number of pool members required" size="50" required/>
+                <br>
+                <input type="text" name="numOfApartmentFloors" id="numOfApartmentFloors" placeholder="Number of planned aparment floors" size="50" required/>
+                <br>
+                <input type="text" name="numOfFlatsPerFloor" id="numOfFlatsPerFloor" placeholder="Number of planned flats per floor" size="50" required/>
+                <br>
+                <input type="text" name="apartmentArea" id="apartmentArea" placeholder="Property area" size="50" required/>
+                <br>
+                <input type="submit" class="button" value="Post ad"/><br>
+                <br>
+            </form>
+        </div>
+
+        <h3> {{ error }}</h3>
+
+</body>
+</html>

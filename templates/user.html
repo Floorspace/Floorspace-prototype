@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+  			<h1>Awesome Man. User login</h1>
+  			<a href="/loginscreen">logout</a>
+  			<br>
+              <br>
+              {% for key in result2%}
+              <h4>Credit used: {{key[0]}}</h4>
+               
+               <h4>Credit limit: {{key[1]}}</h4>
+              
+               <h4>EMI used: {{key[2]}}</h4>
+              
+               <h4>EMI used: {{key[3]}}</h4>
+
+               
+              {% endfor %}
+              
+              <h3>Nearby merchants list</h3>
+              {% for key in result1%}
+               <a href="/order/{{key[0]}}"> {{ key[0] }} </a>
+               <br>
+
+         {% endfor %}
+
+         <br>
+         <h3>Credit transactions</h3>
+         {% for key in result3%}
+         <h4>{{key[0]}}</h4>
+         <h4>{{key[1]}}</h4>
+         <h4>{{key[2]}}</h4>
+          <br>
+          <br>
+          <br>
+    {% endfor %}
+    <br>
+    <br>
+    <h3>EMI transactions</h3>
+    {% for key in result4%}
+    <h4>{{key[0]}}</h4>
+    <h4>{{key[1]}}</h4>
+    <h4>{{key[2]}}</h4>
+    <h4>{{key[3]}}</h4>
+    <h4>{{key[4]}}</h4>
+    <h4>{{key[5]}}</h4>
+     <br>
+     <br>
+     <br>
+  
+{% endfor %}
+        
+</body>
+</html>
+
+<script>
+
+</script>

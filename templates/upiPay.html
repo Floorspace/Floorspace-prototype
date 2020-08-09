@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <div class="box">
+		<h1>Pay Here</h1>
+		{% if result%}
+			<form>
+			Select UPI id:
+			<select id="mySelect">
+
+				{% for key in result%}
+				<option value="{{key}}" onClick="myFunction()">{{key}}</option>
+				{% endfor %}
+
+			</select>
+			</form>
+
+        {% endif %}
+
+        <form>
+        	<input type="text" name="upiId"  id="upiId" placeholder="100"/>
+        	<input type="submit" class="button" value="Pay through credit wallet" formaction="/otp" formmethod="post"/>
+        </form>
+
+		</div>
+        
+</body>
+</html>
+
+<script>
+function myFunction() {
+    document.getElementById("upiId").value = document.getElementById("mySelect").value;
+}
+</script>

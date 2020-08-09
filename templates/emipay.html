@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <div class="box">
+		<h1>Select the EMI options below </h1>
+		<!-- {% if result%}
+			<form>
+			Num of months EMI:
+			<select id="mySelect">
+
+				{% for key in result%}
+				<option value="{{key}}" onClick="myFunction()">{{key}}</option>
+				{% endfor %}
+
+			</select>
+			</form>
+
+        {% endif %} -->
+
+        <form>
+            <input type="text" name="productName"  id="productname" placeholder="Enter unique product name"/>
+            <input type="text" name="numOfEMIMonths"  id="numOfEMIMonths" placeholder="Enter your flexible EMI tenure"/>
+        	<input type="submit" class="button" value="Pay through EMI " formaction="/payEMI" formmethod="post"/>
+        </form>
+
+		</div>
+        
+</body>
+</html>
